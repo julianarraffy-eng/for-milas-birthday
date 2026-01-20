@@ -2,73 +2,135 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Untuk Kamu</title>
+<title>Untuk Mila</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{
-  margin:0;
-  background:#0f172a;
-  color:#e5e7eb;
-  font-family:Segoe UI, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  text-align:center;
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
-.box{
-  max-width:600px;
-  padding:32px;
-  animation:fade 1s;
+
+.box {
+  max-width: 650px;
+  padding: 30px;
+  animation: fade 0.8s ease;
 }
-button{
-  margin-top:28px;
-  padding:12px 24px;
-  background:#38bdf8;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
+
+button {
+  margin-top: 26px;
+  padding: 12px 28px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
 }
-@keyframes fade{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:translateY(0)}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
+
 <body>
 
 <div class="box" id="content">
-  <h2>Hai.</h2>
-  <p>Aku tahu ini muncul tiba-tiba.</p>
-  <button onclick="next()">Masuk</button>
+  <h2>Hai 👋</h2>
+  <button onclick="next()">Klik pelan-pelan ya 🙂</button>
 </div>
 
 <script>
-let step=0;
-const c=document.getElementById("content");
-function next(){
+let step = 0;
+const c = document.getElementById("content");
+
+function next() {
   step++;
-  if(step===1){
-    c.innerHTML=`<p>Ada orang yang datang dan pergi.</p>
-    <p>Dan ada yang diam-diam tetap tinggal.</p>
-    <button onclick="next()">Lanjut</button>`;
-  }else if(step===2){
-    c.innerHTML=`<p>Aku mungkin nggak selalu dekat.</p>
-    <p>Tapi aku nggak pernah lupa.</p>
-    <button onclick="next()">Aku ingat</button>`;
-  }else if(step===3){
-    c.innerHTML=`<h1>🎉 Selamat Ulang Tahun 🎉</h1>
-    <p>Untuk kamu, bestie.</p>
-    <button onclick="next()">Buka pesannya</button>`;
-  }else if(step===4){
-    c.innerHTML=`<p>
-    Terima kasih sudah bertahan sejauh ini.<br><br>
-    Kalau suatu hari kamu lelah,<br>
-    ingat saja…<br><br>
-    ada teman lama yang tidak pernah<br>
-    benar-benar pergi.<br><br>
-    Aku.
-    </p><p>🤍</p>`;
+
+  if (step === 1) {
+    c.innerHTML = `
+      <p>Aku tahu ini hanya ungkapan sederhana.</p>
+      <button onclick="next()">Lanjut</button>
+    `;
+  }
+
+  else if (step === 2) {
+    c.innerHTML = `
+      <p>Waktu berjalan,</p>
+      <p>banyak hal berubah.</p>
+      <button onclick="next()">Iya…</button>
+    `;
+  }
+
+  else if (step === 3) {
+    c.innerHTML = `
+      <p>Ada orang yang datang lalu pergi.</p>
+      <p>Ada juga yang jaraknya berubah, tapi jejaknya tetap tinggal.</p>
+      <button onclick="next()">Terus?</button>
+    `;
+  }
+
+  else if (step === 4) {
+    c.innerHTML = `
+      <p>Tapi ada hal-hal kecil</p>
+      <p>yang diam-diam menetap lebih lama dari yang kita sadari.</p>
+      <button onclick="next()">Seperti apa?</button>
+    `;
+  }
+
+  else if (step === 5) {
+    c.innerHTML = `
+      <p>Seperti ingatan.</p>
+      <p>Dan rasa peduli.</p>
+      <button onclick="next()">Hmm…</button>
+    `;
+  }
+
+  else if (step === 6) {
+    c.innerHTML = `
+      <p>Aku mungkin tidak selalu hadir di dekatmu,</p>
+      <p>tapi aku tidak pernah lupa.</p>
+      <button onclick="next()">…</button>
+    `;
+  }
+
+  else if (step === 7) {
+    c.innerHTML = `
+      <p>Hari ini, aku hanya ingin berhenti sejenak</p>
+      <p>dan menyampaikan sesuatu yang mungkin jarang terucap.</p>
+      <button onclick="next()">Buka 🎁</button>
+    `;
+  }
+
+  else if (step === 8) {
+    c.innerHTML = `
+      <h1>🎉🎂 Selamat Ulang Tahun, Mila! 🎂🎉</h1>
+      <p>✨ Semoga harimu dipenuhi senyum ✨</p>
+      <p>Untuk kamu, yang pernah dan selalu berarti 🌟</p>
+      <button onclick="next()">Pesan terakhir</button>
+    `;
+  }
+
+  else if (step === 9) {
+    c.innerHTML = `
+      <p>
+      Terima kasih sudah berjuang pada dirimu sendiri tanpa pernah mengenal lelah,<br><br>
+      itu tanda bahwa dirimu sangat berharga.
+      </p>
+      <p style="margin-top:30px;"><strong>Sincerely,<br>Raffy 🤍</strong></p>
+    `;
   }
 }
 </script>
