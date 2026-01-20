@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Kamu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  background:#0f172a;
+  color:#e5e7eb;
+  font-family:Segoe UI, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+.box{
+  max-width:600px;
+  padding:32px;
+  animation:fade 1s;
+}
+button{
+  margin-top:28px;
+  padding:12px 24px;
+  background:#38bdf8;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="content">
+  <h2>Hai.</h2>
+  <p>Aku tahu ini muncul tiba-tiba.</p>
+  <button onclick="next()">Masuk</button>
+</div>
+
+<script>
+let step=0;
+const c=document.getElementById("content");
+function next(){
+  step++;
+  if(step===1){
+    c.innerHTML=`<p>Ada orang yang datang dan pergi.</p>
+    <p>Dan ada yang diam-diam tetap tinggal.</p>
+    <button onclick="next()">Lanjut</button>`;
+  }else if(step===2){
+    c.innerHTML=`<p>Aku mungkin nggak selalu dekat.</p>
+    <p>Tapi aku nggak pernah lupa.</p>
+    <button onclick="next()">Aku ingat</button>`;
+  }else if(step===3){
+    c.innerHTML=`<h1>🎉 Selamat Ulang Tahun 🎉</h1>
+    <p>Untuk kamu, bestie.</p>
+    <button onclick="next()">Buka pesannya</button>`;
+  }else if(step===4){
+    c.innerHTML=`<p>
+    Terima kasih sudah bertahan sejauh ini.<br><br>
+    Kalau suatu hari kamu lelah,<br>
+    ingat saja…<br><br>
+    ada teman lama yang tidak pernah<br>
+    benar-benar pergi.<br><br>
+    Aku.
+    </p><p>🤍</p>`;
+  }
+}
+</script>
+
+</body>
+</html>
